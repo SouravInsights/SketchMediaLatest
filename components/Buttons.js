@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Button, PseudoBox } from '@chakra-ui/core';
-import NextLink from 'next/link';
+import React from "react";
+import { motion } from "framer-motion";
+import { Button, Box } from "@chakra-ui/core";
+import NextLink from "next/link";
 
-const MotionButton = motion.custom(PseudoBox);
+const MotionButton = motion.custom(Box);
 const CTAButton = motion.custom(Button);
 
 export function PrimaryButton({ text, height }) {
@@ -16,7 +16,7 @@ export function PrimaryButton({ text, height }) {
       px="30px"
       outline="none"
       bg="cyan.50"
-      fontSize={['lg', 'lg', 'xl', 'xl']}
+      fontSize={["lg", "lg", "xl", "xl"]}
       fontWeight="bold"
       color="gray.50"
       whileHover={{ scale: 1.1 }}
@@ -30,7 +30,7 @@ export function PrimaryButton({ text, height }) {
 export function TextButton({ children, text, key, href }) {
   return (
     <Button
-      fontSize={['xl', 'xl', '2xl', '2xl']}
+      fontSize={["xl", "xl", "2xl", "2xl"]}
       fontWeight="bold"
       color="cyan.50"
       variant="link"
@@ -45,11 +45,11 @@ export function TextButton({ children, text, key, href }) {
 export default function ContactButton({ text }) {
   return (
     <CTAButton
-      mt={['30px', null, null, '42px']}
-      h={['47px', '74px']}
-      w={['180px', '300px']}
+      mt={["30px", null, null, "42px"]}
+      h={["47px", "74px"]}
+      w={["180px", "300px"]}
       bg="white"
-      fontSize={['xl', '2xl', '3xl', '3xl']}
+      fontSize={["xl", "2xl", "3xl", "3xl"]}
       fontWeight="bold"
       color="gray.50"
       whileHover={{ scale: 1.1 }}

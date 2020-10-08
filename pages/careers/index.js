@@ -1,18 +1,19 @@
-import Head from 'next/head';
-import Footer from '@/components/Footer';
-import HeroSection from 'components/HeroSection';
-import GridSection from '@/components/GridSection';
-import GridCard from 'components/GridCard';
-import GridHeader from 'components/GridHeader';
-import GridCardSection from '@/components/GridCardSection';
-import JobCard from 'components/JobCard';
-import { PrimaryButton } from 'components/Buttons';
-import { GraphQLClient } from 'graphql-request';
-import NextLink from 'next/link';
+import Head from "next/head";
+import Footer from "@/components/Footer";
+import HeroSection from "components/HeroSection";
+import GridSection from "@/components/GridSection";
+import GridCard from "components/GridCard";
+import GridHeader from "components/GridHeader";
+import GridCardSection from "@/components/GridCardSection";
+import JobCard from "components/JobCard";
+import { PrimaryButton } from "components/Buttons";
 
 const Careers = () => {
   return (
     <>
+      <Head>
+        <title>Careers - Sketch Media</title>
+      </Head>
       <HeroSection
         title="CAREERS"
         heading="Work and live
@@ -32,10 +33,10 @@ const Careers = () => {
           description="As a team of independent thinkers, we need to share common values and behaviors to make things work."
         />
         <GridCardSection
-          columns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+          columns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         >
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="Empathy"
             carddescription="We get that sometimes things don’t go the way we’d like them to.
@@ -44,7 +45,7 @@ const Careers = () => {
             alt="empathy"
           />
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="Open mindedness"
             carddescription="Got any idea how something could be done better? Good. We love constructive feedback and improving our skills."
@@ -60,10 +61,10 @@ const Careers = () => {
           description="Because happy people make a great company."
         />
         <GridCardSection
-          columns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+          columns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         >
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="First benefit"
             carddescription="Lorem ipsum dolor sit amet, consectetur adip possimus et magnis
@@ -72,7 +73,7 @@ const Careers = () => {
             alt="first-benefit"
           />
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="Third benefit"
             carddescription="Lorem ipsum dolor sit amet, consectetur adip possimus et magnis
@@ -81,7 +82,7 @@ const Careers = () => {
             alt="second-benefit"
           />
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="Third benefit"
             carddescription="Lorem ipsum dolor sit amet, consectetur adip possimus et magnis
@@ -90,7 +91,7 @@ const Careers = () => {
             alt="third-benefit"
           />
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="Fourth benefit"
             carddescription="Lorem ipsum dolor sit amet, consectetur adip possimus et magnis
@@ -104,31 +105,31 @@ const Careers = () => {
       <GridSection>
         <GridHeader title="OPEN ROLES" heading="Career opportunities" />
         <GridCardSection
-          columns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
+          columns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
         >
           <JobCard
-            role="React Developer"
+            jobTitle="React Developer"
             location="Kuwait, Remote"
             status="Ongoing"
           >
             <PrimaryButton text="View job offer" height="55px" />
           </JobCard>
           <JobCard
-            role="Frontend Developer"
+            jobTitle="Frontend Developer"
             location="Kuwait, Remote"
             status="Ongoing"
           >
             <PrimaryButton text="View job offer" height="55px" />
           </JobCard>
           <JobCard
-            role="Backend Developer"
+            jobTitle="Backend Developer"
             location="Kuwait, Remote"
             status="Ongoing"
           >
             <PrimaryButton text="View job offer" height="55px" />
           </JobCard>
           <JobCard
-            role="UI/UX Designer"
+            jobTitle="UI/UX Designer"
             location="Kuwait, Remote"
             status="Ongoing"
           >

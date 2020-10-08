@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import {
   Button,
   Flex,
@@ -18,25 +18,25 @@ import {
   FormLabel,
   Textarea,
   useDisclosure
-} from '@chakra-ui/core';
-import React, { useEffect } from 'react';
-import Footer from 'components/Footer';
-import Testimonials from 'components/Testimonials';
-import GridSection from '@/components/GridSection';
-import GridCard from 'components/GridCard';
-import GridHeader from 'components/GridHeader';
-import GridCardSection from '@/components/GridCardSection';
-import WorksCard from 'components/WorksCard';
-import Tag from 'components/Tag';
-import GlowText from 'components/Text';
-import { TextButton } from 'components/Buttons';
-import { motion } from 'framer-motion';
-import { FaLongArrowAltRight } from 'react-icons/fa';
-import { GraphQLClient } from 'graphql-request';
+} from "@chakra-ui/core";
+import React, { useEffect } from "react";
+import Footer from "components/Footer";
+import Testimonials from "components/Testimonials";
+import GridSection from "@/components/GridSection";
+import GridCard from "components/GridCard";
+import GridHeader from "components/GridHeader";
+import GridCardSection from "@/components/GridCardSection";
+import WorksCard from "components/WorksCard";
+import Tag from "components/Tag";
+import GlowText from "components/Text";
+import { TextButton } from "components/Buttons";
+import { motion } from "framer-motion";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { GraphQLClient } from "graphql-request";
 
 export async function getStaticProps() {
   const contentful = new GraphQLClient(
-    'https://graphql.contentful.com/content/v1/spaces/x7ylmnfcd6wz?access_token=RkN6q-edXoFzeneM-xLAwfqLCj9bbMjRzBZmjmAYqN4'
+    "https://graphql.contentful.com/content/v1/spaces/x7ylmnfcd6wz?access_token=RkN6q-edXoFzeneM-xLAwfqLCj9bbMjRzBZmjmAYqN4"
   );
 
   const { worksCollection, servicesCollection } = await contentful.request(
@@ -90,7 +90,7 @@ const Home = ({ worksCollection, servicesCollection }) => {
 
   useEffect(() => {
     function handleC(event) {
-      if (event.key.toLowerCase() === 'c') {
+      if (event.key.toLowerCase() === "c") {
         if (isOpen) {
           onClose();
         } else {
@@ -98,9 +98,9 @@ const Home = ({ worksCollection, servicesCollection }) => {
         }
       }
     }
-    window.addEventListener('keydown', handleC);
+    window.addEventListener("keydown", handleC);
     return () => {
-      window.removeEventListener('keydown', handleC);
+      window.removeEventListener("keydown", handleC);
     };
   }, [onOpen, isOpen, onClose]);
 
@@ -109,18 +109,16 @@ const Home = ({ worksCollection, servicesCollection }) => {
       as="main"
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
-      flexDirection={['column', 'column', 'row', 'row']}
-      align="center"
-      justify="center"
+      flexDirection={["column", "column", "row", "row"]}
     >
       <Head>
         <title>Home - Sketch Media</title>
       </Head>
 
       <Grid
-        py={['20px', '20px', '80px', '80px']}
-        px={['30px', '30px', '120px', '160px']}
-        templateColumns={{ base: 'repeat(1, 1fr)', md: '1fr 2fr' }}
+        py={["20px", "20px", "80px", "80px"]}
+        px={["30px", "30px", "120px", "160px"]}
+        templateColumns={{ base: "repeat(1, 1fr)", md: "1fr 2fr" }}
         gap={10}
       >
         <Box>
@@ -128,7 +126,7 @@ const Home = ({ worksCollection, servicesCollection }) => {
         </Box>
         <Box>
           <MotionHeading
-            fontSize={['5xl', '6xl', '7xl', '9xl']}
+            fontSize={["5xl", "6xl", "7xl", "9xl"]}
             scaleY="scrollYProgress"
             fontWeight="extrabold"
             color="white"
@@ -136,7 +134,7 @@ const Home = ({ worksCollection, servicesCollection }) => {
             Make Ideas
           </MotionHeading>
           <Heading
-            fontSize={['5xl', '6xl', '7xl', '8xl', '9xl']}
+            fontSize={["5xl", "6xl", "7xl", "8xl", "9xl"]}
             fontWeight="extrabold"
             color="cyan.50"
           >
@@ -145,7 +143,7 @@ const Home = ({ worksCollection, servicesCollection }) => {
 
           <Text
             my="4"
-            fontSize={['md', 'lg', 'xl', '2xl']}
+            fontSize={["md", "lg", "xl", "2xl"]}
             color="white"
             fontWeight="normal"
             lineHeight="shorter"
@@ -180,8 +178,8 @@ const Home = ({ worksCollection, servicesCollection }) => {
               Let's build together!
             </Heading>
           </DrawerHeader>
-          <DrawerBody px={['25px', '25px', '220px', '280px']}>
-            <Stack color="gray.50" spacing={['20px', '20px', '20px', '20px']}>
+          <DrawerBody px={["25px", "25px", "220px", "280px"]}>
+            <Stack color="gray.50" spacing={["20px", "20px", "20px", "20px"]}>
               <Box>
                 <FormLabel htmlFor="fullname">Full name</FormLabel>
                 <Input
@@ -221,7 +219,7 @@ const Home = ({ worksCollection, servicesCollection }) => {
               </Box>
             </Stack>
             <Button
-              my={['20px', '20px', '30px', '30px']}
+              my={["20px", "20px", "30px", "30px"]}
               bg="gray.50"
               color="white"
               fontWeight="bold"
@@ -236,8 +234,8 @@ const Home = ({ worksCollection, servicesCollection }) => {
         <GridHeader title="WORKS" heading="Some ideas we have helped ship" />
       </GridSection>
       <GridCardSection
-        columns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
-        px={['30px', '30px', '80px', '80px']}
+        columns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+        px={["30px", "30px", "80px", "80px"]}
       >
         {worksCollection.items.map((work) => (
           <WorksCard
@@ -255,11 +253,11 @@ const Home = ({ worksCollection, servicesCollection }) => {
       <GridSection>
         <GridHeader title="SERVICES" heading="We can help you with" />
         <GridCardSection
-          columns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+          columns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         >
           {servicesCollection.items.map((service) => (
             <GridCard
-              size={['2xl', '2xl', '3xl', '4xl']}
+              size={["2xl", "2xl", "3xl", "4xl"]}
               color="cyan.50"
               cardheading={service.title}
               carddescription={service.desc}
@@ -280,10 +278,10 @@ const Home = ({ worksCollection, servicesCollection }) => {
       <GridSection bgcolor="gray.250">
         <GridHeader title="WORKFLOW" heading="How we get it done" />
         <GridCardSection
-          columns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+          columns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         >
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="Clear project goals"
             carddescription="We’ll discuss what your business needs most to thrive, and focus on it during the whole project.."
@@ -291,7 +289,7 @@ const Home = ({ worksCollection, servicesCollection }) => {
             alt="clear-project-goals"
           />
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="Perfect toolset"
             carddescription="Thanks to our expertise we’ll offer you a couple of technologies, that will suit your interests best."
@@ -299,7 +297,7 @@ const Home = ({ worksCollection, servicesCollection }) => {
             alt="perfect-toolset"
           />
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="Transparent work environment"
             carddescription="Slack workspace, Jira board, Github repository, you’ll get access to all of these to always be in the know how your project’s going on."
@@ -307,7 +305,7 @@ const Home = ({ worksCollection, servicesCollection }) => {
             alt="transparent-work-environment"
           />
           <GridCard
-            size={('xl', 'xl', '2xl', '2xl')}
+            size={("xl", "xl", "2xl", "2xl")}
             color="offwhite.50"
             cardheading="Afterproject relationship"
             carddescription="Our team will be happy to stay with you even after the project ends, handling your feature requests and maintenance, so you can grow your business in peace."
@@ -320,7 +318,7 @@ const Home = ({ worksCollection, servicesCollection }) => {
       <GridSection>
         <GridHeader title="TESTIMONIALS" heading="What they say about us" />
         <GridCardSection
-          columns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
+          columns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
         >
           <Testimonials
             src="https://pbs.twimg.com/profile_images/1286145170015100928/LWHeOzjY_400x400.jpg"

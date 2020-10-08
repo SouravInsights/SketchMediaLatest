@@ -1,7 +1,7 @@
-import React from 'react';
-import { Heading, Box, Text } from '@chakra-ui/core';
+import React from "react";
+import { Heading, Box, Text } from "@chakra-ui/core";
 
-function JobCard({ role, location, status, children }) {
+function JobCard({ jobTitle, location, status, children }) {
   return (
     <Box
       borderColor="gray.200"
@@ -9,7 +9,7 @@ function JobCard({ role, location, status, children }) {
       boxShadow="0px 20px 20px rgba(18, 18, 18, 1)"
       color="gray.200"
       borderRadius="16px"
-      p={['30px', '30px', '40px', '40px']}
+      p={["30px", "30px", "40px", "40px"]}
     >
       <Heading
         pb="12px"
@@ -18,7 +18,7 @@ function JobCard({ role, location, status, children }) {
         fontWeight="extrabold"
         letterSpacing="widest"
       >
-        {role}
+        {jobTitle}
       </Heading>
       <Text pb="12px" fontSize="xl" color="offwhite.50" fontWeight="normal">
         {location}
