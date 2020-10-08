@@ -1,0 +1,26 @@
+{
+  "name": "sketchmedia",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^1.0.0-rc.5",
+    "@chakra-ui/theme": "^1.0.0-rc.5",
+    "@chakra-ui/theme-tools": "^1.0.0-rc.5",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
+    "framer-motion": "^1.11.1",
+    "graphql-request": "^2.0.0",
+    "i18next": "^19.4.5",
+    "next": "^9.5.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-hook-form": "^5.7.2",
+    "react-icons": "^3.10.0"
+  }
+}
