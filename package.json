@@ -1,5 +1,5 @@
 {
-  "name": "sketchmedia",
+  "name": "agency-website-starter",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -22,5 +22,7 @@
     "react-dom": "^16.13.0",
     "react-hook-form": "^5.7.2",
     "react-icons": "^3.10.0"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }

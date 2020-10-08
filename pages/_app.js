@@ -2,35 +2,10 @@
    get passed to a multiple component tree. For example, this is the best place to add Themes, GlobalStyles, Auths etc. 
 */
 
-import { ThemeProvider, CSSReset, ChakraProvider } from '@chakra-ui/core';
-import { Global, css } from '@emotion/core';
-import theme from '@/styles/theme';
-import NavBar from 'components/NavBar';
-
-const GlobalStyle = ({ children }) => {
-  return (
-    <ChakraProvider theme={theme}>
-      <CSSReset />
-      <Global
-        styles={css`
-          :root {
-            background: #181818;
-            //background: rgb(32,32,32);
-            //background: linear-gradient(90deg, rgba(32,32,32,1) 0%, rgba(26,26,26,1) 33%, rgba(19,19,19,1) 66%);
-            *::selection {
-              color: #ffcc00;
-            }
-          }
-          html {
-            scroll-behavior: smooth;
-          }
-        `}
-      />
-
-      <NavBar />
-    </ChakraProvider>
-  );
-};
+import { ChakraProvider } from "@chakra-ui/core";
+import { Global, css } from "@emotion/core";
+import theme from "@/styles/theme";
+import NavBar from "components/NavBar";
 
 /* Here, our App component receives two props: Component and pageProps. 
    - The Component prop is the active page, so whenever we navigate between routes, Component will change to the new page. Therefore, 
@@ -40,10 +15,10 @@ const GlobalStyle = ({ children }) => {
 */
 const App = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <ChakraProvider theme={theme}>
+      <NavBar />
       <Component {...pageProps} />
-    </ThemeProvider>
+    </ChakraProvider>
   );
 };
 
